@@ -1,0 +1,12 @@
+@import "core";
+
+.flash_notice{
+  padding: 5px 10px 5px 10px;
+  margin:  5px 0px 5px 0px;
+  border: solid 1px #66aa00;;
+  @include border-radius(0.5rem);
+  color: #66aa00;;
+  p{margin: 0;}
+}
+
+
