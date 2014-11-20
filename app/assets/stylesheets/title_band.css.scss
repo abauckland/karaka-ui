@@ -1,4 +1,48 @@
+@import "core";
+@import "buttons";
 
 .title_band{
-  border-bottom: solid 2px #000;  
+  border-bottom: solid 2px #000;
+  padding: 18px 0px 4px 8px;  
+} 
+  @media screen and (max-width: $tablet-landscape) {
+  .title_band{padding: 12px 0px 4px 8px;}    
+  }  
+  @media screen and (max-width: $phone-landscape) {
+  .title_band{padding: 8px 0px 4px 8px;}    
+  }
+
+
+.page_title{
+  float: left;
 }
+
+.title_help{
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin: 0px 0px 0px 5px;
+    cursor: pointer;
+    background: asset_url('tooltip_icon.png') no-repeat;
+}
+
+.title_button{
+  float: right;
+  margin: 10px 10px 0px 0px;
+  @include small-button;
+  @include green-button;
+  border: 1px solid #878787;
+  }  
+  @media screen and (max-width: $tablet-landscape) {
+  .title_button{margin: 4px 10px 0px 0px;}    
+  }  
+  @media screen and (max-width: $phone-landscape) {
+  .title_button{margin: 0px 10px 0px 0px;}    
+  }
+ 
+  
+.page_title_button_red{
+  @extend .page_title_button;
+  @include red-button;
+  border: 1px solid #878787;
+  } 

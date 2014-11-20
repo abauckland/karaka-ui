@@ -59,7 +59,7 @@
 
 
 .border{
-  border: solid 2px #000;
+  border: solid 2px $column_border_colour;
   padding: 12px;
   height: 100%;
   @include border-radius(0.5rem);
@@ -121,106 +121,5 @@
     padding: 0px 0px 0px 0px;
     border-right: none;
   }
-}
-
-
-
-
-
-form fieldset{
-  border: none;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;  
-}
-
-form {font-size: 1.2rem;}
-
-form label.label_80 {
-    float: left;
-    width: 80px;
-}
-
-form label, form input {}
-form input {width: 100%;}
-form select {width: 100%;}
-form textarea {width: 100%;}
-
-form input[type="radio"]{
-  float: left;
-  width: 10px;
-  margin: 3px 5px 0px 0px;
-  padding: 2px 5px 0px 0px;
-  }
-
-form span {
-    display: block;
-    overflow: hidden;
-    padding: 0 5px 0 0;
-    margin-right: 10px;
-}
-
-form span span {
-  float: left;
-  padding: 0px 5px 0px 0px; 
-}
-
-
-form div.form_tooltip{
-    float: right;
-    width: 10px; 
-    min-height: 10px;
-    background-color: blue; 
-}
-
-form p.input_note{
-  font-size: 10px;
-  padding: 0;
-  margin: 0;
-}
-
-
-.form_title{
-  margin: 0px 0 10px 0;
-  padding: 5px 0px 5px 0px; 
-  border-bottom: solid 2px #000;
-  color:#66aa00;    
-}
-
-
-.form_error{
-  margin: 0px 0 10px 0;
-  padding: 12px; 
-  border: solid 1px red;
-  @include border-radius(0.5rem);
-  color: red;
-  p{margin: 0;}
-  ul{margin: 5px 0px 0px 0px;}
-}
-
-//form footer submit and cancel buttons
-.form_submit {
-  margin: 10px 0 0 0;
-  padding: 5px 0px 5px 0px; 
-  border-top: solid 2px #000;
-}
-
-.form_submit input[type=submit]{
-  @include form_icons(-320px);
-  @include form-button; //override default settings
-  color:#66aa00;
-  &:hover{
-    text-decoration:underline;
-  }
-}
-
-.form_submit a{
-  @include form-button; //override default settings
-  float: right;
-  color:red;
-  padding-top: 3px;
-  padding-right: 0px;
-  @include form_icons(-160px);
-  &:hover{text-decoration:underline;    }
-  &:visited{color: red;}  
 }
 

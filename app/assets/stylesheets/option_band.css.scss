@@ -1,0 +1,7 @@
+@import "core";
+
+.option_band{
+  @include border-radius(0.5rem);
+  @include shadow-all(0px 0px 5px #aeaeae);  
+  @include dark_grey_46_gradient; 
+}
