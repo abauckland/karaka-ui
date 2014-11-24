@@ -1,7 +1,28 @@
 
-    <div class="row option_band">
-        <div class="col-5-6"><p>col-1-1 (options band)</p></div>
+<div class="row option_band">
 
-        <div class="col-1-12"><p>(button)</p></div>
-        <div class="col-1-12"><p>(button)</p></div>
+    <div class="option_right">   
+        <div><%= link_to 'Upload Icon', nil, class: "option_button" %></div>
+        <div><%= link_to 'Upload Icon', nil, class: "option_button" %></div>
     </div>
+
+    <div class="option_left">
+
+            <div>
+                <label class="select_1">Section:</label>
+                <%= select_tag "select_id", "<option>David the name is longer than the select box</option>".html_safe, prompt: "Select something" %>
+            </div>
+            
+            <div>
+                <label class="select_2">Subsection:</label>
+                <%= select_tag "select_id", "<option>David the name is longer than the select box</option>".html_safe, prompt: "Select something" %>
+            </div>
+            
+               
+        </form>    
+    
+    </div>
+
+</div>
+
+

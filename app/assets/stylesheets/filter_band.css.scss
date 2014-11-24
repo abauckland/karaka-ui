@@ -1,7 +1,7 @@
 @import "core";
 @import "buttons";
 
-.option_band{
+.filter_band{
   @include border-radius(0.5rem);
 //  @include shadow-all(0px 0px 5px #aeaeae);  
 //  @include light_grey_32_gradient; 
@@ -17,52 +17,83 @@
 
 }
 
-.option_right{
+.filter_right{
   float: right;
 }
 
-.option_right div{
+.filter_right div{
   float: right;
 }
 
-.option_right a.option_button{
+.filter_right a.option_button{
   float: right;
   margin: 3px 0px 4px 10px;
   @include title-button-green;
 }
 
 
-.option_left{
+.filter_left{
   overflow: hidden;
 }
 
-.option_left div{
+.filter_left div{
   float: left;
+}
+
+
+.filter_left div{
   width: 385px;
   margin: 4px 10px 4px 0px;
 }
 
-.option_left label.select_1{
+.filter_left label.select{
   padding-top: 4px;
   margin-right:2px;
   font-weight: bold;
   width: 60px;
 }
 
-.option_left label.select_2{
+.filter_left label.date{
   padding-top: 4px;
   margin-right:2px;
   font-weight: bold;
-  width: 60px;
+  width: 65px;
+  text-align: right;
 }
-
 
 //form footer submit and cancel buttons
-.option_left select{
+.filter_left select{
   float: left;
   margin: 0px 0px 0px 2px;
   padding: 2px 0px 2px 0px;
   width: 320px;
 }
+
+//form footer submit and cancel buttons
+.filter_left input[type=date]{
+  float: left;
+  width: 125px;
+}
+
+
+//form footer submit and cancel buttons
+.filter_left input[type=submit]{
+  float: left;
+  margin: 3px 0px 4px 0px;
+  width: auto;
+  @include title-button-orange;
+}
+
+.filter_right input[type="submit"] {
+  @include menu_icons(-1000px);
+  border: 0px;
+  margin: 5px 0px 0px 5px;
+  padding: 0px 0px 0px 0px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 0px;  
+}
+
 
 

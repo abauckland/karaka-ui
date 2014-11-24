@@ -1,42 +1,6 @@
 //core-ui
 @import "core";
 
-//button background gradient images
-@mixin red_28_gradient {background: image-url('red_28.png') repeat-x};
-@mixin inverted_red_28_gradient {background: image-url('inverted_red_28.png') repeat-x}; 
-
-@mixin green_28_gradient {background: image-url('green_28.png') repeat-x};
-@mixin inverted_green_28_gradient {background: image-url('inverted_green_28.png') repeat-x};
-
-
-@mixin orange_28_gradient {background: image-url('orange_28.png') repeat-x};
-@mixin inverted_orange_28_gradient {background: image-url('inverted_orange_28.png') repeat-x};
-
-
-//button colours and shaddow
-@mixin red-button {border-color: #db817b; @include red_28_gradient; @include button-box-shadow(#fed897);
-                      &:hover {@include inverted_red_28_gradient; }}
-@mixin green-button {border-color: #b0db64; @include green_28_gradient; @include button-box-shadow(#a4e271);
-                      &:hover {@include inverted_green_28_gradient; }}
-@mixin orange-button {border-color: #ebc178; @include orange_28_gradient; @include button-box-shadow(#f29c93);
-                      &:hover {@include inverted_orange_28_gradient; }} 
-@mixin dark-grey-button {border-color: #ddd; @include dark_grey_28_gradient; @include button-box-shadow(#aaa);
-                      &:hover {@include inverted_dark_grey_28_gradient; }}     
-
-
-//menu buttons
-@mixin small-button {
-  font-size:1.2rem;
-  padding:0.2rem 0.4rem;
-  display:inline-block;
-  color:#ffffff;
-  font-weight:bold;
-  text-decoration:none;
-  text-shadow:1px 1px 0px #528009;
-  cursor:pointer;
-  @include border-radius(0.5rem);    
-}
-
 //form_buttons
 @mixin form-button {
   font-size:1.2rem;
@@ -47,7 +11,60 @@
   text-decoration:none;    
   cursor: pointer;
 }
+
+
+@mixin button-box-shadow($colour) {
+  -moz-box-shadow: 0px 1px 2px $colour;
+  -webkit-box-shadow: 0px 1px 2px $colour;
+  box-shadow: 0px 1px 2px $colour;
+} 
+
+@mixin title-button {
+  @include border-radius(0.3rem);
+  @include button-box-shadow(#666666);
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 4px 8px 4px 8px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  a{
+    color: #fff;
+    text-decoration: none;
+    &:hover{color: #fff;}
+    &:visited{color: #fff;}
+    }
+}
                                       
+@mixin title-button-green {
+  @include title-button;
+  background: #66aa00;
+  border: solid #66aa00 0px;
+  &:hover {
+    background: #4b8533;
+  }
+}
+
+@mixin title-button-orange {
+  @include title-button;
+  background: #f78014;
+  border: solid #f78014 0px;
+  &:hover {
+    background: #df6d05;
+  }
+}
+
+@mixin title-button-red {
+  @include title-button;
+  background: #66aa00;
+  border: solid #66aa00 0px;
+  &:hover {
+    background: #4b8533;
+  }
+}
+
                       
 //table row icons
 @mixin menu_icons($var) {
