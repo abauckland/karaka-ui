@@ -14,7 +14,13 @@ form label{
     padding-top: 3px;
 }
 
+form label.label_60 {width: 60px;}
+form label.label_70 {width: 70px;}
 form label.label_80 {width: 80px;}
+form label.label_90 {width: 90px;}
+form label.label_100 {width: 100px;}
+form label.label_110 {width: 110px;}
+form label.label_120 {width: 120px;}
 
 form input {width: 100%;}
 form select {width: 100%; padding: 2px 0px 2px 0px;}
@@ -26,6 +32,15 @@ form input[type="radio"]{
   margin: 4px 5px 0px 0px;
   padding: 2px 5px 0px 0px;
   }
+
+//form footer submit and cancel buttons
+form a.form_button{
+  float: left;
+  margin: 3px 0px 4px 0px;
+  width: auto;
+  @include title-button-grey;
+}
+
 
 form span {
     display: block;
@@ -67,8 +82,44 @@ form div.form_tooltip{
 .form_footer input[type=submit]{
   @include form_icons(-320px);
   @include form-button; //override default settings
+  width: auto;
   color: $save_text_colour;
   &:hover{text-decoration:underline;}
 }
 
+//inline form
+.column_inline_form div{
+  float: left;
+  font-size: 1.2rem;
+  margin: 0px 0 10px 0;
+}
+
+div.header_80{
+  width: 80px;
+  font-weight: bold;
+}
+
+div.header_90{
+  width: 90px;
+  font-weight: bold;
+}
+
+div.label_80{width: 80px;}
+div.label_90{width: 90px;}
+
+.column_inline_form span {
+  display: block;
+  overflow: hidden;
+  padding: 0px 5px 0px 0px;
+  margin-right: 20px;
+}
+
+.column_inline_form input[type=submit]{
+  float: right;
+  width: 20px;
+  min-height: 20px;
+  @include form_icons(-320px);
+  @include form-button;
+  padding-left: 0px; //override default settings
+}
 

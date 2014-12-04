@@ -6,7 +6,7 @@
   font-size:1.2rem;
   font-weight: bold;
   height:20px; //height of icon
-  padding: 0px 20px 0px 30px; //padding to show icon
+  padding: 0px 20px 0px 25px; //padding to show icon
   border: none; //override default settings
   text-decoration:none;    
   cursor: pointer;
@@ -62,6 +62,15 @@
   border: solid #66aa00 0px;
   &:hover {
     background: #4b8533;
+  }
+}
+
+@mixin title-button-grey {
+  @include title-button;
+  background: #555;
+  border: solid #555 0px;
+  &:hover {
+    background: #333;
   }
 }
 

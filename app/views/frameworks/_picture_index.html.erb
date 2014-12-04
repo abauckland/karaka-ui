@@ -1,0 +1,26 @@
+
+    <div class="row">
+
+        <div class="col-1-1 column_1">
+            <div class="border">
+                                
+                <%= render :partial => "flash_notice" %>                 
+                
+                <div class="row">
+                    <% 10.times do %>
+                    <div class="image_tile">
+                        <img src="http://www.w3schools.com/html/pic_mountain.jpg" alt="Mountain View">              
+                        <%= link_to '', nil, method: :delete, data: { confirm: 'Are you sure?' }, class: 'line_delete_icon', title: "delete image"  %>
+
+                        <p>In Use</p>
+                        
+                    </div>
+                    <% end %>
+<!-- 
+                    <p>No images uploaded.</p>
+-->   
+                </div>
+            </div>
+        </div>
+
+    </div>

@@ -77,7 +77,7 @@ class Help < ActiveRecord::Base
 #url
 
 #date
-  DATE_REGEXP = /(20[0-9][0-9])\(0[0-9]|1[012])\((02\012[0-9])|(0[469]\012[0-9]|30)|(11\012[0-9]|30)|(0[13578] \012[0-9]|3[0-1])|(1[02] \012[0-9]|3[0-1]))/
+  DATE_REGEXP = /(20[0-9][0-9])\S((02\S[012][0-9])|(0[469]\S([012][0-9]|30))|(0[13578]\S([012][0-9]|3[0-1]))|(1[012]\S([012][0-9]|3[0-1])))/
   #format - DD/MM/YYYY, does not filter leap year for february
 #  validates :time,
 #   presence: true,
@@ -102,7 +102,7 @@ class Help < ActiveRecord::Base
 
 
 #colour
-  COLUR_REGEXP = /^#{1}(\h{6}|\h{3})$/ #check for 6 or 3 character hex code
+  COLOUR_REGEXP = /^#{1}(\h{6}|\h{3})$/ #check for 6 or 3 character hex code
 #  validates :colour,
 #   presence: true,
 #   format: { with: COLUR_REGEXP, message: "please enter a vaild hex colour in the format #dddddd or #ddd" }
