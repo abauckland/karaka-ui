@@ -1,31 +1,27 @@
 
 <div class="row filter_band">
 
-    <form method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
+    <form method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">   
+        <div>       
+            <div>
+                <label class="select">Employee:</label>
+                <%= select_tag "select_id", "<option>David the name is longer than the select box</option>".html_safe, prompt: "Select something" %>
+            </div>
+            <div>
+                <label class="date">Date From:</label>
+                <%= date_field_tag( "people", nil, {placeholder: 'dd/mm/yyyy'}) %>
+            
+                <label class="date">Date To:</label>
+                <%= date_field_tag( "people", nil, {placeholder: 'dd/mm/yyyy'}) %>
+            </div>
+            <input type="submit" name="submit1" id="submit1" value="Filter"/>
+        </div>
+             
+        <div class="float_right">
+            <div><input type="submit" name="submit1" id="submit1" value="Filter" /></div>
+            <div><input type="submit" name="submit1" id="submit1" value="Filter" /></div>
+        </div>
 
-        <div class="filter_right">   
-            <div><input type="submit" name="submit1" id="submit1" value="Filter" /></div>
-            <div><input type="submit" name="submit1" id="submit1" value="Filter" /></div>
-        </div>
-    
-        <div class="filter_left">
-    
-                <div>
-                    <label class="select">Employee:</label>
-                    <%= select_tag "select_id", "<option>David the name is longer than the select box</option>".html_safe, prompt: "Select something" %>
-                </div>
-                
-                <div>
-                        <label class="date">Date From:</label>
-                        <%= date_field_tag( "people", nil, {placeholder: 'dd/mm/yyyy'}) %>
-    
-                        <label class="date">Date To:</label>
-                        <%= date_field_tag( "people", nil, {placeholder: 'dd/mm/yyyy'}) %>
-                </div>
-                                    
-                <input type="submit" name="submit1" id="submit1" value="Filter" />
-        
-        </div>
     </form>  
 </div>
 

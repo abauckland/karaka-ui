@@ -30,7 +30,7 @@
 
 a.title_button{
   float: right;
-  margin: 10px 0px 0px 0px;
+  margin: 10px 0px 0px 10px;
   @include title-button-green;
   &:hover{color: #fff;}
   &:visited{color: #fff;}
