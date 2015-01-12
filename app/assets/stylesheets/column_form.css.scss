@@ -50,6 +50,13 @@ form a.form_button{
   @include title-button-grey;
 }
 
+form a.form_button_full{
+  float: left;
+  margin: 0px 0px 4px 0px;
+  width: 100%;
+  @include title-button-green;
+}
+
 
 form span {
     display: block;
