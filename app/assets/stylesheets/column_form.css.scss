@@ -189,9 +189,16 @@ div.label_90{width: 90px;}
 //image drop down select
 .form_image_select {
     content:"";
-    height: 60px;
+    height: 80px;
     clear:both;
     padding-bottom: 10px;
+}
+
+.form_help_textarea {
+  content:"";
+  height: 400px;
+  clear:both;
+  padding-bottom: 10px;
 }
 
 
